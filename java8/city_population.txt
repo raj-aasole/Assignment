@@ -1,0 +1,32 @@
+import java.util.*;
+import java.util.stream.Collectors;
+ class Cityinfo {
+	 String cityname;
+	    int citypopulation;
+	    float area;
+	
+	    Cityinfo(String cityname,int citypopulation,float area){
+	    this.cityname=cityname;
+	    this.citypopulation=citypopulation;
+	    this.area=area;
+	}
+ }
+	    public class City{
+	public static void main(String s[]){
+	    ArrayList <Cityinfo> city = new ArrayList<Cityinfo>();
+	    city.add(new Cityinfo("wardha",   2000,   75));
+	    city.add(new Cityinfo("Yavatmal", 5000,  100));
+	    city.add(new Cityinfo("Jalgaon",  4000, 350));
+	    city.add(new Cityinfo("Shirpur", 4500, 200));
+	  
+	  Cityinfo obj=city.stream().max((obj1, obj2)->obj1.citypopulation>obj2.citypopulation? 1:-1).get(); 
+	  System.out.println("Citypopulation in --> "+obj.cityname+"-->"+obj.citypopulation);
+	  
+	  Set<Integer> Set = city.stream().map(e->e.citypopulation).collect(Collectors.toSet());
+	  System.out.println(Set);
+	  
+      Cityinfo leastarea=city.stream().max((obj1, obj2)->obj1.area<obj2.area? 1:-1).get(); 
+	  System.out.println("Leastarea in --> "+leastarea.cityname+"-->"+leastarea.area);
+
+}
+}
