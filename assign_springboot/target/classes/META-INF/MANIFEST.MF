@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: raj.aasole
+Build-Jdk: 17.0.1
+Implementation-Title: spring_boot_1
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.yash
+Implementation-URL: https://spring.io/projects/spring-boot/spring_boot_1
+Created-By: Maven Integration for Eclipse
+

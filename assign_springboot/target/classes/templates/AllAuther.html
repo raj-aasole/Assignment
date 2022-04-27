@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Auther List</title>
+</head>
+<body>
+<table align="center">
+ <tr>
+  <th>S.No</th>
+  <th>Name</th>
+  <th>Email</th>
+ </tr>
+ <tr th:each="data:${ali}">
+ <td th:text=${data.auid}></td>
+ <td th:text=${data.auther_name}></td>
+ <td th:text=${data.email}></td>
+<td> <a th:href="@{'/editauther/'+${data.auid}}">Edit</a></td>
+ <td><a th:href="@{'/delete/'+${data.auid}}">Delete</a><td>
+ 
+ </tr>
+</table>
+</body>
+</html>

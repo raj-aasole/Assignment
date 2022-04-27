@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Book Title List</title>
+</head>
+<body>
+<table align="center">
+ <tr>
+  <th>S.No</th>
+  <th>title</th>
+  <th>auid</th>
+  <th>pubid</th>
+  <th>price</th>
+ </tr>
+ <tr th:each="data:${bli}">
+ <td th:text=${data.btid}></td>
+ <td th:text=${data.title}></td>
+ <td th:text=${data.auid}></td>
+ <td th:text=${data.pubid}></td>
+ <td th:text=${data.price}></td>
+   <td><a  th:href="@{'/editbooktitle/'+${data.btid}}">Edit</a></td>
+  <td><a th:href="@{'/deleteb/'+${data.btid}}">Delete</a><td>
+ </tr>
+</table>
+</body>
+</html>
